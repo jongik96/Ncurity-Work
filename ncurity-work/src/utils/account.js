@@ -74,6 +74,7 @@ function Login(state) {
           msg: "success",
           userInfo: account[i],
           status: true,
+          account: account,
         };
         return response;
       }

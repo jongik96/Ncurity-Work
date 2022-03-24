@@ -133,6 +133,7 @@ const clickLogin = async () => {
   let response = await store.dispatch("FETCH_LOGIN", state);
   if (response.msg == "success") {
     if (response.userInfo.role == 1) {
+      store.state.accounts = response.account;
       router.push("/memberList");
     } else {
       router.push("/visitor");
